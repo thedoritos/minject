@@ -8,35 +8,21 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Minject'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Minject.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'Minimum DI framework'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Minject is a minimum Dependency Injection framework for Swift.
+It is designed for developers to avoid depending on "magical" behavior and have explicit control by self.
                        DESC
 
   s.homepage         = 'https://github.com/thedoritos/Minject'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'thedoritos' => 'thedoritos@gmail.com' }
-  s.source           = { :git => 'https://github.com/thedoritos/Minject.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Tomohiro Matsumura' => 'thedoritos@gmail.com' }
+  s.source           = { :git => 'https://github.com/thedoritos/minject.git', :tag => s.version.to_s }
 
+  s.swift_versions   = ['5.0']
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Minject/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Minject' => ['Minject/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
