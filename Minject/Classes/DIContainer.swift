@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct DIContainer: DIResolver {
+public struct DIContainer: DIResolver {
     private let factories: [Any]
 
-    init() {
+    public init() {
         self.init(factories: [])
     }
 
@@ -18,19 +18,19 @@ struct DIContainer: DIResolver {
         self.factories = factories
     }
 
-    func register<T>(_ type: T.Type, _ instance: T) -> DIContainer {
-        register(T.self, { _ in instance })
+    public func register<T>(_ type: T.Type, _ instance: T) -> DIContainer {
+        self.register(T.self, { _ in instance })
     }
 
-    func register<T>(_ type: T.Type, _ method: @escaping (DIResolver) -> T) -> DIContainer {
+    public func register<T>(_ type: T.Type, _ method: @escaping (DIResolver) -> T) -> DIContainer {
         DIContainer(factories: self.factories + [DIFactory(method: method)])
     }
 
-    func resolve<T>() -> T {
-        resolve(T.self)
+    public func resolve<T>() -> T {
+        self.resolve(T.self)
     }
 
-    func resolve<T>(_ type: T.Type) -> T {
+    public func resolve<T>(_ type: T.Type) -> T {
         let factories = self.factories.compactMap { $0 as? DIFactory<T> }
         guard let factory = factories.first else {
             fatalError("DIFactory for \(type) is not registered")

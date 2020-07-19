@@ -11,6 +11,6 @@ struct DIFactory<T> {
     let method: (DIResolver) -> T
 
     func resolve(_ resolver: DIResolver) -> T {
-        method(resolver)
+        self.method(resolver)
     }
 }

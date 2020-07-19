@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DIResolver {
+public protocol DIResolver {
     func resolve<T>() -> T
 
     func resolve<T>(_ type: T.Type) -> T
