@@ -1,5 +1,5 @@
 PODS:
-  - Minject (0.1.0)
+  - Minject (1.0.0)
   - Nimble (7.3.4)
   - Quick (1.2.0)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Minject: 8a7357130ab949087af5fb4c5c38683a29b2a9df
+  Minject: ea01652e54eb2fb3b2f1a8531105889d03f4174e
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
