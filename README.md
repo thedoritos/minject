@@ -22,7 +22,7 @@ pod 'Minject'
 
 ## Author
 
-thedoritos, thedoritos@gmail.com
+Tomohiro Matsumura, thedoritos@gmail.com
 
 ## License
 
